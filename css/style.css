@@ -17,7 +17,6 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 2000px;
 }
 
 /* navbar */
@@ -146,19 +145,22 @@ body {
 }
 
 .about, 
-.menux {
+.menux,
+.kontak {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2, 
-.menux h2 {
+.menux h2,
+.kontak h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem ;
 }
 
 .about h2 span, 
-.menux h2 span {
+.menux h2 span,
+.kontak h2 span {
   color: var(--primary);
 }
 
@@ -192,10 +194,12 @@ body {
 }
 
 /* menu */
-.menux h2 {
+.menux h2
+.kontak h2 {
   margin-bottom: 1rem;
 }
-.menux p {
+.menux p,
+.kontak p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -211,8 +215,15 @@ body {
   justify-content: center;
 }
 
+.menux .menu-beverage,
+.menux .menu-food {
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+
 .menux .row .menu-card{
   text-align: center;
+  padding-bottom: 2rem;
 }
 
 .menux .row .menu-card img {
@@ -220,7 +231,99 @@ body {
   width: 80%;
 }
 
+.menux .row .menu-card .menu-card-title {
+  margin-top: 1rem auto 0.5rem;
+}
 
+/* kontak */
+.kontak .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #b6895b;
+}
+
+.kontak .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.kontak .row form {
+  flex: 1 1 45rem;
+  padding:  5rem 2rem;
+  text-align: center;
+}
+ .kontak .row form .inputGroup {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+ }
+
+ .kontak .row form .inputGroup input, textarea {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+ }
+
+ .kontak .row form button {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--bg);
+  cursor: pointer;
+ }
+
+ /* footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .sosial{
+  padding: 1rem 0;
+}
+
+
+ footer .sosial a {
+  color: #fff;
+  margin: 1rem;
+ }
+
+ footer .sosial a:hover {
+  color: var(--bg);
+ }
+
+
+ footer .links {
+  margin-bottom: 1.4rem;
+ }
+
+ footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+ }
+
+ footer .links a:hover {
+  color: var(--bg);
+ }
+
+ footer .credit {
+  font-size: 0.8;
+ }
+
+ footer .credit a {
+  color: var(--bg);
+  font-weight: 800;
+ }
 
 /* responsive */
 
@@ -297,6 +400,24 @@ body {
 .about .row .content h3 {
  font-size: 1.6rem;
 }
+
+.menux p {
+  font-size: 1.2rem;
+}
+
+.kontak .row {
+  flex-wrap: wrap;
+}
+
+.kontak .row .map {
+  height: 30rem;
+}
+
+.kontak .row form {
+  padding-top: 0;
+}
+
+
 }
 
 
