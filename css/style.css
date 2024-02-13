@@ -86,39 +86,6 @@ body {
   display: none;
 }
 
-/* nav search */
-.navbar .search {
-  position: absolute;
-  top: 100%;
-  right: 7%;
-  background-color: #fff;
-  width: 50rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: 0.3s;
-}
-
-.navbar .search.active{
-  transform: scaleY(1);
-}
-
-.navbar .search input {
-  height: 100%;
-  width: 100%;
-  font-size: 1.6rem;
-  color: var(--bg);
-  padding: 1rem;
-}
-
-.navbar .search label {
-  cursor: pointer;
-  font-size: 2rem;
-  margin-right: 1.5rem;
-  color: var(--bg);
-}
 
 /* shopping cart */
 #shoppingButton {
@@ -191,6 +158,54 @@ body {
   text-align: center;
 }
 
+/* Co */
+.formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-top: 1px dashed black;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.formContainer h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.formContainer form {
+  width: 100%;
+  text-align: center;
+}
+
+.formContainer label {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.formContainer span {
+  text-align: right;
+}
+
+.formContainer input {
+  background-color: white;
+  padding: 5px;
+  font-size: 1rem;
+  width: 70%;
+}
+
+.formContainer .checkoutButton {
+  padding: 6px 14px;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin: 1rem auto;
+  cursor: pointer;
+}
 
 /* hero */
 .hero {
@@ -349,12 +364,13 @@ body {
   margin-top: 1rem auto 0.5rem;
 }
 
-.menux .row .menu-card #shopping-cart {
-  width: 4rem;
-  height: 4rem;
+.menux .row .menu-card svg {
+  width: 2rem;
+  height: 2rem;
   color: #fff;
+  margin-top: 1rem;
 }
-.menux .row .menu-card #shopping-cart:hover {
+.menux .row .menu-card svg:hover {
  color: var(--primary);
  transition: 0.3s;
 }
@@ -445,6 +461,11 @@ footer .sosial{
  }
 
  footer .credit a {
+  color: white;
+  font-weight: 800;
+ }
+
+ footer .credit a span{
   color: var(--bg);
   font-weight: 800;
  }

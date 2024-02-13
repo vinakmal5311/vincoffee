@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinco</title>
+    <link rel="icon" href="multimedia/img/logo.jpg" type="image/png">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +39,6 @@
         </div>
 
         <div class="navbarExtra">
-            <a href="#" id="searchButton"><i data-feather="search"></i></a>
             <a href="#" id="shoppingButton">
                 <i data-feather="shopping-cart"></i>
                 <span class="quantity-badge" x-show="$store.cart.qty" x-text="$store.cart.qty"></span>
@@ -46,11 +46,7 @@
             <a href="#" id="menu"><i data-feather="menu"></i></a>
         </div>
 
-        <!-- search -->
-        <div class="search">
-            <input type="search" name="" id="searchBox" placeholder="Cari disini...">
-            <label for="searchBox" id="searchBox"><i data-feather="search"></i></label>
-        </div>
+
 
         <!-- shopping cart -->
         <div class="shoppingCart">
@@ -71,6 +67,21 @@
             </template>
             <h4 x-show="!$store.cart.items.length">Masih Kosong</h4>
             <h4 x-show="$store.cart.items.length">Total : <span x-text="rupiah($store.cart.total)"></span></h4>
+
+            <div class="formContainer" x-show="$store.cart.items.length">
+                <form action="" id="checkout">
+                    <label for="name">
+                        <span>Nama</span>
+                        <input type="text" name="name" id="name">
+                    </label>
+                    <label for="nohp">
+                        <span>No. Hp</span>
+                        <input type="number" name="nohp" id="nohp" autocomplete="off">
+                    </label>
+
+                    <button class="checkoutButton" type="submit" id="checkoutButton">Checkout</button>
+                </form>
+            </div>
         </div>
     </nav>
 
@@ -80,7 +91,7 @@
             <h1>Kami Buka, <span>Setiap Hari</span></h1>
             <h4>10.00 - 23.00</h4>
             <p>Bangkitkan kenangan dengan kopi terbaik.</p>
-            <a href="#" class="beli">Beli Sekarang</a>
+            <a href="#menux" class="beli">Beli Sekarang</a>
         </main>
     </section>
 
@@ -122,7 +133,6 @@
                     <img :src="`multimedia/menu/${item.img}`" :alt="item.name" class="menu-card-img">
                     <h3 x-text="item.name"></h3>
                     <p class="menu-card-price" x-text="rupiah(item.price)"></p>
-                    <p class="menu-card-price">-</p>
                     <a href="#" @click.prevent="$store.cart.add(item)" id="shopping-cart">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -141,7 +151,6 @@
                     <img :src="`multimedia/menu/${item.img}`" :alt="item.name" class="menu-card-img">
                     <h3 x-text="item.name"></h3>
                     <p class="menu-card-price" x-text="rupiah(item.price)"></p>
-                    <p class="menu-card-price">-</p>
                     <a href="#" @click.prevent="$store.cart.add(item)" id="shopping-cart">
                         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
@@ -155,7 +164,7 @@
     <!-- kontak -->
     <section id="kontak" class="kontak">
         <h2><span>Kontak</span> Kami</h2>
-        <p>Silahkan isi riviewnya disini.</p>
+        <p>Silahkan hubungi kami, dengan mengisi data disini.</p>
         <div class="row">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487.17778699691!2d107.57504694072377!3d-6.971970321447074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e92ab999555d%3A0xc9bdb61c86e168e5!2s2HHG%2B825%2C%20Sayati%2C%20Margahayu%2C%20Bandung%20Regency%2C%20West%20Java%2040228!5e0!3m2!1sen!2sid!4v1707134725937!5m2!1sen!2sid"
@@ -188,8 +197,10 @@
 
     <footer>
         <div class="sosial">
-            <a href="#"><i data-feather="instagram"></i></a>
-            <a href="#"><i data-feather="facebook"></i></a>
+            <a href="https://instagram.com/vinakmal_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg==" target="_blank"><i
+                    data-feather="instagram"></i></a>
+            <a href="https://x.com/vinnn57?t=tMe1G4AkFyz5C4hkaKwcnA&s=09" target="_blank"><i
+                    data-feather="twitter"></i></a>
         </div>
         <div class="links">
             <a href="#home">Beranda</a>
@@ -198,7 +209,7 @@
             <a href="#kontak">Kontak</a>
         </div>
         <div class="credit">
-            <a href="vinakmal5311/github.io/vincoffee">Vinakmkal</a>
+            <a href="https://vinakmal5311.github.io/vincoffee" target="_blank">Vin<span>Coffee</span></a>
         </div>
     </footer>
 
