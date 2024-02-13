@@ -1,3 +1,9 @@
+
+// created on : 20240205
+// created by : Davin Akmal Dwi Putra
+// logs: - 20240213 created
+
+
 // toogle active
 const navbarNav = document.querySelector('.navbarNav');
 

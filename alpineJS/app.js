@@ -1,3 +1,7 @@
+// created on : 20240205
+// created by : Davin Akmal Dwi Putra
+// logs: - 20240213 created
+
 document.addEventListener('alpine:init', () => {
    Alpine.data('menu', () => ({
     items: [
